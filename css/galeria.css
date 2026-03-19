@@ -1,0 +1,324 @@
+/* Configuración General */
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.sfaj-name {
+  font-family: 'Lora', serif;
+  font-size: 0.7rem;
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+  font-family: 'Lora', serif;
+  text-wrap: balance;
+}
+.balance {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty; /* Esto no balancea todo, pero evita que quede una palabra sola al final */
+}
+
+/* Colores personalizados 
+(Inspirados en la paleta 5 de Crecimiento Intelectual/Turquesa) */
+:root {
+  --primary-color: #00868b;
+  /* Turquesa profundo */
+  --soft-bg: #f8f9fa;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-info {
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: #006b6f;
+  color: white;  
+}
+.btn-outline-primary {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-primary:hover, .btn-outline-primary:hover {
+  background-color: #006b6f;
+}
+
+/* Hero Section con estilo de acuarela */
+.hero-section {
+  min-height: 60vh;
+  /* Usamos un degradado que imita el estilo de acuarela suave */
+  background: linear-gradient(135deg, rgba(167, 170, 175, 0.4) 0%, rgba(0, 134, 139, 0.1) 100%);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-section .container {
+  max-width: 100%;
+  overflow-x: hidden;
+  /* Evita el scroll horizontal accidental */
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+}
+
+/* Fuerza a los botones a no ser más anchos que la pantalla en móviles muy pequeños */
+@media (max-width: 576px) {
+  .hero-section .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+
+.logo {
+  height: 200px;
+  width: auto;
+}
+
+.hero-section h1 {
+  color: #2c3e50;
+
+  font-size: 1.8em;
+  font-style: oblique;
+}
+
+.mayusc {
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.lema {
+  padding: 10px 2px;
+}
+
+/* Tarjetas de servicios */
+.fila {
+  margin-bottom: 20px;
+}
+
+.card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilo para la Reseña */
+.testimonial-card {
+  background-color: #fcfcfc;
+  border-left: 5px solid var(--primary-color);
+}
+
+/* Botón flotante de WhatsApp para móviles */
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.galeria {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  /* Efecto desenfoque estilo iOS */
+}
+
+/* Estilos del Lightbox */
+
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 8px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+
+
+
+/* Estilos para el Lightbox */
+.lightbox-modal {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  /* Por encima del Nav */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95);
+  overflow: hidden;
+}
+
+.lightbox-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+#img-ampliada {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  object-fit: contain;
+}
+
+/* Botones de navegación */
+
+
+.close-btn {
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  background: none;
+}
+
+.prev-btn,
+.next-btn {
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  font-size: 30px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Tipografía de la galería */
+.lora-font {
+  font-family: 'Lora', serif;
+  color: #2c3e50;
+}
+
+/* Ajuste para que las imágenes del mosaico sean siempre cuadradas */
+.img-mosaico-wrapper {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+/* Estilos para el contenedor del icono de video */
+.card-media-wrapper {
+  position: relative; /* Esencial para posicionar el icono dentro */
+  overflow: hidden; /* Asegura que el icono no se salga si es demasiado grande */
+  aspect-ratio: 1/1; /* Mantiene la proporción 1:1 */
+}
+
+/* Estilos para el icono de video */
+.video-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centra el icono perfectamente */
+  font-size: 1rem; /* Tamaño del icono */
+  color: rgba(255, 255, 255, 0.8); /* Color blanco semi-transparente */
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+  border-radius: 50%; /* Icono circular */
+  padding: 0.5rem; /* Espaciado interno */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* Asegura que el clic pase al elemento de abajo (imagen/video) */
+  z-index: 10; /* Asegura que esté por encima de la imagen/video */
+  /* Para el icono de Bootstrap Icons, asegúrate de que el tamaño del `i` sea el correcto */
+  line-height: 1; /* Para centrar verticalmente el icono BI */
+}
+
+/* Opcional: Efecto al pasar el ratón */
+.card-media-wrapper:hover .video-icon {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0.7);
+}

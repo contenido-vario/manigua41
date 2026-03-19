@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manigua 41 - Local</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/galeria.css">
+    <link rel="icon" type="icon" href="photo.ico">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="photo.png" alt="logo" height="45" class="d-inline-block align-top me-2">
+            <span class="mayusc">Fotos y videos del Local</span>
+        </a>
+    </div>
+  </nav>
+
+    <div id="lightbox" class="lightbox-modal">
+      <span class="close-btn" onclick="cerrarLightbox()">×</span>
+      
+      <button class="prev-btn" onclick="cambiarFoto(-1)">&#10094;</button>
+      <button class="next-btn" onclick="cambiarFoto(1)">&#10095;</button>
+  
+      <div class="lightbox-container">
+          <img id="img-ampliada" src="" alt="" style="display: none;">
+          <video id="video-ampliado" controls style="display: none; max-width: 100%; max-height: 80vh;"></video>
+      
+          <p id="caption" class="text-white mt-2"></p>
+      </div>
+  </div>
+
+  <div class="container py-5">
+    <h2 class="text-center mb-5 mt-4 lora-font">Manigua 41</h2>
+    <p><small>Clicar las imagenes y videos para ampliar. El local sólo puede ser utilizado como almacén o trasteros.</small></p>
+    <div class="row g-3" id="mosaico-fotos"></div>
+</div>
+
+
+
+    <footer class="py-4 bg-dark text-white text-center">
+      <div class="container">
+          <p class="mb-0 small">© 2026 | delatorrerita</p>
+      </div>
+  </footer>
+
+  <script src="./js/array.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
